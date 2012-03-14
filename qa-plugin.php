@@ -273,7 +273,7 @@
 		if($country == '') return;
 		$code = $flag[$country];
 
-		$flag_src = $path . "images/flags/32/";
+		$flag_src = $path . "images/32/";
 		if ( file_exists( dirname(__FILE__) . "/images/32/" . strtolower( $code ) . '.png' ) ) {
 				$png = $flag_src . strtolower( $code ) . '.png';
 		} 
