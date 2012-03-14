@@ -272,9 +272,11 @@
 		
 		if($country == '') return;
 		$code = $flag[$country];
+		
+		$size = qa_opt('flags_size');
 
-		$flag_src = $path . "images/32/";
-		if ( file_exists( dirname(__FILE__) . "/images/32/" . strtolower( $code ) . '.png' ) ) {
+		$flag_src = $path . "images/$size/";
+		if ( file_exists( dirname(__FILE__) . "/images/$size/" . strtolower( $code ) . '.png' ) ) {
 				$png = $flag_src . strtolower( $code ) . '.png';
 		} 
 		else {
