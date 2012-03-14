@@ -280,7 +280,7 @@
 		else {
 			$png = $flag_src . 'none.png';
         }
-		return '<img src="'.$png.'" class="flag" title="'.bp_core_get_user_displayname($uid).' is from '.$country.'" />';
+		return '<img src="'.$png.'" style="vertical-align:middle; padding-left:2px" class="flag" title="'.bp_core_get_user_displayname($uid).' is from '.$country.'" />';
 	
 	}
 
