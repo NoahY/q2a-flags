@@ -4,14 +4,19 @@ Question2Answer Flags
 -----------
 Description
 -----------
-This is a plugin for **Question2Answer** that provides flags in usermeta with Buddypress_ integration enabled.
+This is a plugin for **Question2Answer** that provides flag display for non-WP-integrated installs and Buddypress_ integrated installs.
 
 .. _Buddypress: http://www.buddypress.org/
 
 --------
 Features
 --------
-- adds flags to user meta based on Buddypress_ country
+- allows display of 4 sizes of flags, 252 countries, all images included
+- creates select field for users to select country
+- adds flags to post meta for users
+- automatically detects whether Buddypress or non-WP, prevents use for non-BP-WP-integration
+- creates user field via button, populates field for Buddypress
+- replaces user field on-the-fly for non-WP install
 
 .. _Buddypress: http://www.buddypress.org/
 
