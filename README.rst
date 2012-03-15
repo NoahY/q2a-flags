@@ -17,6 +17,7 @@ Features
 - automatically detects whether Buddypress or non-WP, prevents use for non-BP-WP-integration
 - creates user field via button, populates field for Buddypress
 - replaces user field on-the-fly for non-WP install
+- all country names editable via language files
 
 .. _Buddypress: http://www.buddypress.org/
 
