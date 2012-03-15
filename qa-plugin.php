@@ -5,7 +5,7 @@
         Plugin URI: https://github.com/NoahY/q2a-flags
         Plugin Update Check URI: https://github.com/NoahY/q2a-flags/raw/master/qa-plugin.php
         Plugin Description: 
-        Plugin Version: 0.1
+        Plugin Version: 0.2
         Plugin Date: 2012-03-14
         Plugin Author: NoahY
         Plugin Author URI: 
