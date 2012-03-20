@@ -5,7 +5,7 @@
         Plugin URI: https://github.com/NoahY/q2a-flags
         Plugin Update Check URI: https://github.com/NoahY/q2a-flags/raw/master/qa-plugin.php
         Plugin Description: 
-        Plugin Version: 0.2
+        Plugin Version: 0.3
         Plugin Date: 2012-03-14
         Plugin Author: NoahY
         Plugin Author URI: 
@@ -20,7 +20,7 @@
 	}
 
 	function qa_flag_array() {
-		return array(
+		$flags = array(
 			'Andorra' => 'ad',
 			'United Arab Emirates' => 'ae',
 			'Afghanistan' => 'af',
@@ -268,6 +268,10 @@
 			'Zaire (former)' => 'zr',
 			'Zimbabwe' => 'zw'
 		);
+		if(!qa_opt('flags_register_required')) {
+			$flags = array_merge(array('0' => ''),$flags);
+		}
+		return $flags;
 	}
 
 	function qa_flag_html($uid,$size,$path) {
@@ -320,6 +324,7 @@
     qa_register_plugin_module('module', 'qa-flags-admin.php', 'qa_flags_admin', 'Flags Admin');
 	qa_register_plugin_layer('qa-flags-layer.php', 'Flags Layer');	
 	qa_register_plugin_phrases('qa-flags-lang-*.php', 'flags');
+	qa_register_plugin_overrides('qa-flags-overrides.php');
 
 /*
 	Omit PHP closing tag to help avoid accidental output

@@ -5,6 +5,10 @@
 		// modify field for account page
 		
 		function doctype() {
+			if(isset($this->content['flags_plugin_field'])) {
+				$this->content['form']['fields'][qa_opt('flags_field')] = $this->content['flags_plugin_field'];
+				qa_error_log($this->content['form']);
+			}
 			if($this->request == 'account' && isset($this->content['form_profile']['fields'][qa_opt('flags_field')])) {
 				$qa_flag_array = qa_flag_array();
 				foreach($qa_flag_array as $i => $v) {

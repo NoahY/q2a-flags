@@ -39,8 +39,12 @@
 					qa_opt('flags_enable_a',(bool)qa_post_text('flags_enable_a'));
 					qa_opt('flags_enable_c',(bool)qa_post_text('flags_enable_c'));
 					qa_opt('flags_enable_other',(bool)qa_post_text('flags_enable_other'));
+					
 					qa_opt('flags_size',(int)qa_post_text('flags_size'));
 					qa_opt('flags_field',qa_post_text('flags_field'));
+					
+					qa_opt('flags_register',(bool)qa_post_text('flags_register'));
+					qa_opt('flags_register_required',(bool)qa_post_text('flags_register_required'));
 
 					$ok = qa_lang('admin/options_saved');
 				}
@@ -149,6 +153,24 @@
 					'label' => 'Enable Flags for second meta user',
 					'tags' => 'NAME="flags_enable_other"',
 					'value' => qa_opt('flags_enable_other'),
+					'type' => 'checkbox',
+				);
+
+				$fields[] = array(
+					'type' => 'blank',
+				);
+
+				$fields[] = array(
+					'label' => 'Enable country field on registration form',
+					'tags' => 'NAME="flags_register"',
+					'value' => qa_opt('flags_register'),
+					'type' => 'checkbox',
+				);
+
+				$fields[] = array(
+					'label' => 'Require country selection on registration form',
+					'tags' => 'NAME="flags_register_required"',
+					'value' => qa_opt('flags_register_required'),
 					'type' => 'checkbox',
 				);
 

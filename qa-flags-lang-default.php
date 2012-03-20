@@ -27,6 +27,7 @@
 	return array(
 		'x_is_from_y' => '^ is from $',
 		
+		'0' => '',
 		'Andorra' => 'Andorra',
 		'United Arab Emirates' => 'United Arab Emirates',
 		'Afghanistan' => 'Afghanistan',
