@@ -1,4 +1,5 @@
 <?php
+
 	function qa_get_request_content() {
 		$qacontent = qa_get_request_content_base();
 		if(qa_opt('flags_enable')) {
