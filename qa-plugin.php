@@ -294,7 +294,7 @@
 				else if($c['title']=='name')
 					$name = $c['content'];
 			}
-			if(!$name) {
+			if(!isset($name)) {
 				$name = qa_userids_to_handles(array($uid));
 				$name = $name[$uid];
 			}
