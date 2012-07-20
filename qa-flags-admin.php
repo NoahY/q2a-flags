@@ -39,6 +39,7 @@
 					qa_opt('flags_enable_a',(bool)qa_post_text('flags_enable_a'));
 					qa_opt('flags_enable_c',(bool)qa_post_text('flags_enable_c'));
 					qa_opt('flags_enable_other',(bool)qa_post_text('flags_enable_other'));
+					qa_opt('flags_enable_userlist',(bool)qa_post_text('flags_enable_userlist'));
 					
 					qa_opt('flags_size',(int)qa_post_text('flags_size'));
 					qa_opt('flags_field',qa_post_text('flags_field'));
@@ -153,6 +154,13 @@
 					'label' => 'Enable Flags for second meta user',
 					'tags' => 'NAME="flags_enable_other"',
 					'value' => qa_opt('flags_enable_other'),
+					'type' => 'checkbox',
+				);
+
+				$fields[] = array(
+					'label' => 'Enable Flags in users list',
+					'tags' => 'NAME="flags_enable_userlist"',
+					'value' => qa_opt('flags_enable_userlist'),
 					'type' => 'checkbox',
 				);
 

@@ -55,5 +55,19 @@
 			}
 			qa_html_theme_base::post_meta($post, $class, $prefix, $separator);
 		}		
+		// add badges to users list
+
+		function ranking($ranking) {
+			if(@$ranking['type']=='users' && qa_opt('flags_enable') && qa_opt('flags_enable_userlist')) {
+				$size = qa_opt('flags_size');
+				foreach($ranking['items'] as $idx => $item) {
+					$handle = strip_tags($item['label']);
+					$uid = qa_handles_to_userids(array($handle));
+					$uid = $uid[$handle];
+					if(isset($ranking['items'][$idx]['score'])) $ranking['items'][$idx]['score'] .= '</td><td class="qa-top-users-score">'.qa_flag_html($uid,$size,QA_HTML_THEME_LAYER_URLTOROOT);
+				}
+			}
+			qa_html_theme_base::ranking($ranking);
+		}
 	}
 
