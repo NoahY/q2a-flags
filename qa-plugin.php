@@ -3,7 +3,7 @@
 /*
         Plugin Name: Flags
         Plugin URI: https://github.com/NoahY/q2a-flags
-        Plugin Update Check URI: https://github.com/NoahY/q2a-flags/raw/master/qa-plugin.php
+        Plugin Update Check URI: https://raw.github.com/NoahY/q2a-flags/master/qa-plugin.php
         Plugin Description: 
         Plugin Version: 0.6
         Plugin Date: 2012-03-14
